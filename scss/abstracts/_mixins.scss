@@ -1,0 +1,22 @@
+@use 'variables.scss' as *;
+
+@mixin set-breakpoint($size) {
+  $value: map-get($breakpoints, $size);
+  $rule: if($size == 'only-mobile', 'max-width', 'min-width');
+
+  @media screen and ($rule: $value) {
+    @content;
+  }
+}
+
+@mixin set-hover {
+  @media screen and (any-hover: hover) and (any-pointer: fine) {
+    @content;
+  }
+}
+
+@mixin set-reduced-motion {
+  @media screen and (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

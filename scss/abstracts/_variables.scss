@@ -1,0 +1,57 @@
+// COLORS
+$color-primary: #00a1f5;
+$color-primary-light: lighten($color-primary, 35%);
+$color-secondary: #fff;
+$color-secondary-dark: #eee;
+$color-tertiary: #444;
+$color-tertiary-light: #666;
+
+// FONT SIZES
+$font-size-xs: clamp(1.42rem, 0.1vw + 1.38rem, 1.5rem);
+$font-size-s: clamp(1.7rem, 0.34vw + 1.59rem, 2rem);
+$font-size-m: clamp(2.04rem, 0.7vw + 1.81rem, 2.66rem);
+$font-size-l: clamp(2.45rem, 1.24vw + 2.05rem, 3.54rem);
+$font-size-xl: clamp(2.94rem, 2.01vw + 2.29rem, 4.71rem);
+$font-size-xxl: clamp(3.53rem, 3.11vw + 2.53rem, 6.26rem);
+
+// PADDINGS
+$padding-s: clamp(1.6rem, 3%, 2.4rem);
+$padding-m: clamp(2.4rem, 6%, 4.8rem);
+$padding-l: clamp(4.8rem, 12%, 9.6rem);
+
+$padding-xs: calc($padding-s / 2);
+$padding-xl: calc($padding-l * 2);
+
+// MARGINS
+$margin-block-s: min(3.2rem, 4vh);
+$margin-block-m: min(6.4rem, 8vh);
+$margin-block-l: min(12.8rem, 16vh);
+
+// GAPS
+$gap-s: clamp(1.6rem, 3vmax, 2.4rem);
+$gap-m: clamp(2.4rem, 6vmax, 4.8rem);
+$gap-l: clamp(4.8rem, 8vmax, 6.4rem);
+
+$gap-xs: calc($gap-s / 2);
+
+// BREAKPOINTS
+$breakpoints: (
+  tab-port: 36em,
+  // 576px
+  tab-land: 48em,
+  // 768px
+  desktop: 62em,
+  // 992px
+  big-desktop: 75em,
+  // 1200px
+  only-mobile: 62em,
+);
+
+// SHADOWS
+$shadow-1: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+
+// BORDERS
+$border-1: 0.1rem solid $color-primary;
+
+// HEADER HEIGHT
+$header-height: clamp(5.5rem, 3.98vw + 4.23rem, 9rem);

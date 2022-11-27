@@ -1,0 +1,46 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.socials {
+  display: flex;
+  gap: $gap-xs;
+
+  &__item {
+    display: grid;
+    place-items: center;
+    width: calc($font-size-xxl * 1.2);
+    aspect-ratio: 1;
+    border: 0.2rem solid $color-primary;
+    border-radius: 50%;
+
+    @include set-hover {
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+
+    @include set-breakpoint(tab-land) {
+      width: $font-size-xxl;
+    }
+
+    @include set-breakpoint(desktop) {
+      width: $font-size-xl;
+    }
+  }
+
+  &__link {
+    font-size: $font-size-m;
+    color: $color-primary;
+    transition-duration: 0s;
+
+    @include set-breakpoint(desktop) {
+      font-size: $font-size-s;
+    }
+  }
+
+  @include set-hover {
+    &__item:hover &__link {
+      color: $color-tertiary;
+    }
+  }
+}

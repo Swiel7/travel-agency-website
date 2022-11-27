@@ -1,0 +1,155 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+section:not(:first-of-type) {
+  padding-block: $padding-m;
+}
+
+section {
+  background-color: $color-secondary;
+}
+
+.section-about {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: $gap-m;
+    align-items: center;
+    background: url('../img/world-map.png') repeat-x;
+    background-position: -18% 123%;
+  }
+
+  &__imagebox {
+    flex: 1 1 35rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap-s;
+    align-items: center;
+  }
+
+  &__image {
+    &:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1/3;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+
+  &__contentbox {
+    flex: 1 1 30rem;
+    padding-block: $padding-s;
+    color: $color-tertiary-light;
+
+    .section-heading {
+      text-align: left;
+
+      &::before {
+        inset: -0.8rem 0 0 -3rem !important;
+        font-size: $font-size-xl;
+      }
+    }
+  }
+
+  &__title {
+    padding-block: 0 $padding-xs;
+    font-size: $font-size-s;
+  }
+
+  &__description {
+    padding-bottom: $padding-m;
+    font-size: $font-size-xs;
+    font-weight: 200;
+    line-height: 1.7;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: $gap-s;
+  }
+
+  &__countersbox {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: $gap-s;
+    width: 100%;
+    padding-top: $padding-s;
+  }
+
+  &__counter {
+    width: min-content;
+    flex-grow: 1;
+    padding-inline: $padding-s;
+  }
+
+  &__subtitle {
+    text-align: center;
+    padding-top: $padding-l;
+    font-size: $font-size-m;
+    font-weight: 400;
+    color: $color-tertiary;
+  }
+}
+
+.section-services,
+.section-tours {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+    gap: $gap-m;
+    place-items: center;
+  }
+}
+
+.section-tours {
+  background-color: $color-secondary-dark;
+}
+
+.section-gallery {
+  text-align: center;
+}
+
+.section-newsletter {
+  background-color: transparent;
+  text-align: center;
+
+  &__container {
+    max-width: 70rem !important;
+    padding: $padding-s $padding-m !important;
+  }
+
+  &__title {
+    font-size: $font-size-l;
+    color: $color-secondary;
+    letter-spacing: 0.1rem;
+  }
+
+  &__description {
+    font-size: $font-size-s;
+    color: $color-secondary-dark;
+    padding-block: $padding-s;
+  }
+}
+
+.section-contact {
+  padding-block: $padding-l !important;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-m;
+    align-items: center;
+
+    form {
+      flex: 1 1 35rem;
+    }
+
+    iframe {
+      flex: 1 1 45rem;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.tour {
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-1;
+  border-radius: 0.8rem;
+  background-color: $color-secondary;
+  max-width: 40rem;
+
+  &__imagebox {
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include set-hover {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: $font-size-s;
+    color: $color-secondary;
+    background-color: $color-primary;
+    padding: calc($padding-xs/2) $padding-xs;
+    letter-spacing: 0.1rem;
+  }
+
+  &__contentbox {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-s;
+    color: $color-tertiary;
+    flex-grow: 1;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__city,
+  &__price {
+    font-size: $font-size-s;
+    font-weight: 600;
+  }
+
+  &__city {
+    text-transform: uppercase;
+  }
+
+  &__price {
+    color: $color-primary;
+
+    span {
+      font-size: $font-size-xs;
+      color: $color-tertiary-light;
+      text-decoration: line-through;
+      font-weight: 200;
+      margin-left: calc($padding-xs/2);
+    }
+  }
+
+  &__rating {
+    padding-block: $padding-xs $padding-s;
+  }
+
+  &__star {
+    font-size: $font-size-xs;
+    color: $color-primary;
+  }
+
+  &__ratings-number {
+    padding-left: $padding-xs;
+    font-size: $font-size-xs;
+    font-weight: 200;
+    color: $color-tertiary-light;
+  }
+
+  &__description {
+    padding-bottom: $padding-s;
+    font-size: $font-size-xs;
+    line-height: 1.7;
+    color: $color-tertiary-light;
+    flex-grow: 1;
+  }
+
+  &__icons {
+    color: $color-tertiary-light;
+    padding-bottom: $padding-m;
+
+    i {
+      font-size: $font-size-s;
+      padding-right: $padding-xs;
+    }
+
+    span {
+      font-size: $font-size-xs;
+      padding-right: $padding-s;
+    }
+  }
+
+  &__book-btn {
+    text-align: center;
+  }
+}

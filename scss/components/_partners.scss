@@ -1,0 +1,8 @@
+.partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+
+  &__logo {
+    width: 100%;
+  }
+}

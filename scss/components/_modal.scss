@@ -1,0 +1,46 @@
+@use '../abstracts/variables.scss' as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  background-color: rgba($color-tertiary, 0.8);
+  backdrop-filter: blur(0.3rem);
+  visibility: hidden;
+  opacity: 0;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--open &__container {
+    transform: scale(1);
+  }
+
+  &__container {
+    position: relative;
+    padding: $padding-s;
+    box-shadow: $shadow-1;
+    border-radius: 0.8rem;
+    background-color: $color-secondary-dark;
+    transform: scale(0.25);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: $padding-s;
+    right: $padding-s;
+    font-size: $font-size-xl;
+    color: $color-tertiary;
+    line-height: 1;
+  }
+
+  &__header {
+    font-size: $font-size-m;
+    color: $color-tertiary;
+    padding-bottom: $padding-m;
+  }
+}

@@ -1,0 +1,16 @@
+@use '../abstracts/variables.scss' as *;
+
+.swiper-pagination-bullet-active {
+  background-color: $color-primary !important;
+}
+
+.lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.92) !important;
+}
+
+.lg-actions {
+  button {
+    font-size: $font-size-l !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+}

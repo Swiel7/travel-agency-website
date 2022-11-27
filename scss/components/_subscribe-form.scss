@@ -1,0 +1,18 @@
+@use '../abstracts/variables.scss' as *;
+
+.subscribe-form {
+  display: flex;
+
+  input {
+    padding: $padding-xs $padding-s;
+    font-size: $font-size-xs;
+    background-color: $color-secondary-dark;
+    color: $color-tertiary-light;
+    border-radius: 1rem 0 0 1rem;
+    width: 100%;
+  }
+
+  button {
+    border-radius: 0 1rem 1rem 0;
+  }
+}

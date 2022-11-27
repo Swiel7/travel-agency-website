@@ -1,0 +1,45 @@
+@use '../abstracts/variables.scss' as *;
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+  font-size: $font-size-s;
+  width: min(90vw, 45rem);
+
+  label {
+    color: $color-tertiary;
+  }
+
+  input,
+  select {
+    display: block;
+    width: 100%;
+    padding: $padding-xs $padding-s;
+    border-radius: 0.6rem;
+    background-color: $color-secondary;
+    border: 0.2rem solid $color-secondary-dark;
+    box-shadow: $shadow-1;
+    margin-top: $padding-xs;
+    color: $color-tertiary-light;
+
+    &:focus {
+      border-color: $color-tertiary-light;
+    }
+  }
+
+  select {
+    appearance: none;
+    background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - $padding-s);
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  &__btn-book {
+    margin-top: $padding-s;
+  }
+}

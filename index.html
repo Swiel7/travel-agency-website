@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Agency Website" />
+  <meta name="author" content="Slawomir Wielgus" />
+  <title>Travel Agency Website</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" sizes="any">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- lightGallery.js stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+  <!-- Swiper.js stylesheet-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- lightGallery.js scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+  <!-- Swiper.js script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- Main script -->
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__container">
+
+      <img class="logo" src="img/logo.svg" alt="Company Logo">
+
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu_item"><a href="#hero" class="menu__link">Home</a></li>
+          <li class="menu_item"><a href="#about" class="menu__link">About</a></li>
+          <li class="menu_item"><a href="#services" class="menu__link">Services</a></li>
+          <li class="menu_item"><a href="#tours" class="menu__link">Tours</a></li>
+          <li class="menu_item"><a href="#gallery" class="menu__link">Gallery</a></li>
+          <li class="menu_item"><a href="#reviews" class="menu__link">Reviews</a></li>
+          <li class="menu_item"><a href="#contact" class="menu__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="header__btn btn btn--primary">Book now</button>
+
+      <button class="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- SECTION HERO -->
+  <main>
+    <section class="section-hero" id="hero">
+
+      <div class="hero-slider swiper">
+        <div class="hero-slider__container swiper-wrapper">
+
+          <div class="hero-slider__slide swiper-slide">
+            <picture class="hero-slider__imagebox">
+              <source srcset="img/hero/hero1_1920.jpg" media="(min-width: 36em)">
+              <img src="img/hero/hero1_640.jpg" alt="Hero image - beach" class="hero-slider__image">
+            </picture>
+            <div class="hero-slider__contentbox">
+              <h1 class="hero-slider__title primary-heading">Explore the world</h1>
+              <p class="hero-slider__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                laborum beatae dignissimos maxime totam incidunt tempora aperiam quisquam possimus mollitia! Earum
+                eveniet ullam nulla quibusdam!</p>
+              <button class="btn btn--secondary btn--white">Learn more</button>
+            </div>
+          </div>
+
+          <div class="hero-slider__slide swiper-slide">
+            <picture class="hero-slider__imagebox">
+              <source srcset="img/hero/hero2_1920.jpg" media="(min-width: 36em)">
+              <img src="img/hero/hero2_640.jpg" alt="Hero image - man on jet ski" class="hero-slider__image">
+            </picture>
+            <div class="hero-slider__contentbox">
+              <h1 class="hero-slider__title primary-heading">Enjoy your tour</h1>
+              <p class="hero-slider__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi,
+                asperiores molestiae. Voluptas saepe debitis deserunt optio quisquam recusandae, quidem, dolor non ipsa
+                dolores error minima.</p>
+              <button class="btn btn--secondary btn--white">Learn more</button>
+            </div>
+          </div>
+
+          <div class="hero-slider__slide swiper-slide">
+            <picture class="hero-slider__imagebox">
+              <source srcset="img/hero/hero3_1920.jpg" media="(min-width: 36em)">
+              <img src="img/hero/hero3_640.jpg" alt="Hero image - ocean" class="hero-slider__image">
+            </picture>
+            <div class="hero-slider__contentbox">
+              <h1 class="hero-slider__title primary-heading">Make your dreams</h1>
+              <p class="hero-slider__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                perferendis vel ipsam laboriosam nulla nemo voluptatem quidem blanditiis ipsum a consectetur, magnam aut
+                atque fugiat?</p>
+              <button class="btn btn--secondary btn--white">Learn more</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-slider__pagination swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- SECTION ABOUT -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="section-about__container">
+
+          <div class="section-about__imagebox">
+            <div class="section-about__image">
+              <img src="img/about/person1.jpg" alt="Company employee - man">
+            </div>
+            <div class="section-about__image">
+              <img src="img/about/person2.jpg" alt="Company employee - man">
+            </div>
+            <div class="section-about__image">
+              <img src="img/about/person3.jpg" alt="Company employee - woman">
+            </div>
+          </div>
+
+          <div class="section-about__contentbox">
+            <h2 class="section-heading" data-title="Why choose us">Why choose us</h2>
+            <p class="section-about__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis,
+              quisquam.</p>
+            <p class="section-about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              libero voluptates cumque dolores sequi eum eveniet quae distinctio maiores sit dolore corrupti doloribus
+              accusantium impedit ad inventore sapiente voluptatum nostrum placeat, id soluta. Optio possimus et veniam
+              molestias velit amet!</p>
+            <div class="section-about__buttons">
+              <a href="#contact" class="btn btn--primary">Get in touch</a>
+              <a href="#" class="btn btn--secondary">Read more</a>
+            </div>
+          </div>
+
+          <div class="section-about__countersbox">
+            <div class="counter section-about__counter">
+              <span class="counter__number" data-value="11">0</span>
+              <span class="counter__title">International awards</span>
+            </div>
+            <div class="counter section-about__counter">
+              <span class="counter__number" data-value="19">0</span>
+              <span class="counter__title">Years of experience</span>
+            </div>
+            <div class="counter section-about__counter">
+              <span class="counter__number" data-value="1474">0</span>
+              <span class="counter__title">Tours booked</span>
+            </div>
+            <div class="counter section-about__counter">
+              <span class="counter__number" data-value="678">0</span>
+              <span class="counter__title">Happy travelers</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="section-about__subtitle">Companies that trusted us</h3>
+        <div class="partners">
+          <img src="img/partners/logo1.jpg" alt="Logo partner 1" class="partners__logo">
+          <img src="img/partners/logo2.jpg" alt="Logo partner 2" class="partners__logo">
+          <img src="img/partners/logo3.jpg" alt="Logo partner 3" class="partners__logo">
+          <img src="img/partners/logo4.jpg" alt="Logo partner 4" class="partners__logo">
+          <img src="img/partners/logo5.jpg" alt="Logo partner 5" class="partners__logo">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section class="section-services" id="services">
+      <div class="container">
+        <h2 class="section-heading" data-title="Our services">Our services</h2>
+
+        <div class="section-services__container">
+
+          <div class="feature">
+            <div class="feature__iconbox">
+              <i class="fa-solid fa-money-bill feature__icon"></i>
+            </div>
+            <h3 class="feature__title">Lowest prices</h3>
+            <p class="feature__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
+              exercitationem
+              cupiditate ducimus dolore nobis rem!</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature__iconbox">
+              <i class="fa-solid fa-route feature__icon"></i>
+            </div>
+            <h3 class="feature__title">Variety of tours</h3>
+            <p class="feature__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, vero
+              quas
+              nulla eum temporibus repudiandae similique praesentium cumque labore quibusdam.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature__iconbox">
+              <i class="fa-solid fa-thumbs-up feature__icon"></i>
+            </div>
+            <h3 class="feature__title">Easy booking</h3>
+            <p class="feature__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sunt error
+              magni repudiandae impedit, molestias cupiditate velit?</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature__iconbox">
+              <i class="fa-solid fa-hotel feature__icon"></i>
+            </div>
+            <h3 class="feature__title">Handpicked hotels</h3>
+            <p class="feature__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae omnis porro
+              odio. Numquam quae libero porro eum ratione fugit reprehenderit fuga nobis.</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature__iconbox">
+              <i class="fa-solid fa-plane feature__icon"></i>
+            </div>
+            <h3 class="feature__title">Flexible transport</h3>
+            <p class="feature__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sequi,
+              veritatis
+              illum sed magni aliquid!
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="feature__iconbox">
+              <i class="fa-solid fa-headphones feature__icon"></i>
+            </div>
+            <h3 class="feature__title">24/7 Support</h3>
+            <p class="feature__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+              necessitatibus ipsa dolore non tempore aliquam pariatur ducimus quos.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TOURS -->
+    <section class="section-tours" id="tours">
+      <div class="container">
+        <h2 class="section-heading" data-title="Our tours">Our tours</h2>
+
+        <div class="section-tours__container">
+
+          <article class="tour">
+            <div class="tour__imagebox">
+              <img src="img/tours/sydney_640.jpg" alt="Photo of Sydney" class="tour__image" loading="lazy">
+              <span class="tour__discount">-13%</span>
+            </div>
+            <div class="tour__contentbox">
+
+              <div class="tour__row">
+                <h3 class="tour__city">Sydney</h3>
+                <span class="tour__price">$1749.99 <span>$2011.99</span></span>
+              </div>
+
+              <div class="tour__rating">
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star-half-stroke tour__star"></i>
+                <span class="tour__ratings-number">4 customer reviews</span>
+              </div>
+
+              <p class="tour__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolor sit
+                voluptas optio molestias alias, cupiditate cum? Quia, fugit dolore! Beatae omnis tenetur ad dolores!
+              </p>
+
+              <div class="tour__icons">
+                <i class="fa-solid fa-bowl-food"></i><span>Meal</span>
+                <i class="fa-solid fa-clock"></i><span>7 Days</span>
+                <i class="fa-solid fa-plane"></i><span>Flight</span>
+              </div>
+
+              <button class="tour__book-btn btn btn--primary">Book now</button>
+            </div>
+          </article>
+
+          <article class="tour">
+            <div class="tour__imagebox">
+              <img src="img/tours/paris_640.jpg" alt="Photo of Paris" class="tour__image" loading="lazy">
+            </div>
+            <div class="tour__contentbox">
+
+              <div class="tour__row">
+                <h3 class="tour__city">Paris</h3>
+                <span class="tour__price">$1449.99</span>
+              </div>
+
+              <div class="tour__rating">
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-regular fa-star tour__star"></i>
+                <span class="tour__ratings-number">7 customer reviews</span>
+              </div>
+
+              <p class="tour__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aut architecto
+                qui eveniet cum perferendis magni earum inventore at quo, odio officia, recusandae aperiam delectus.
+              </p>
+
+              <div class="tour__icons">
+                <i class="fa-solid fa-bowl-food"></i><span>Meal</span>
+                <i class="fa-solid fa-clock"></i><span>7 Days</span>
+                <i class="fa-solid fa-plane"></i><span>Flight</span>
+              </div>
+
+              <button class="tour__book-btn btn btn--primary">Book now</button>
+            </div>
+          </article>
+
+          <article class="tour">
+            <div class="tour__imagebox">
+              <img src="img/tours/london_640.jpg" alt="Photo of London" class="tour__image" loading="lazy">
+              <span class="tour__discount">-12%</span>
+            </div>
+            <div class="tour__contentbox">
+
+              <div class="tour__row">
+                <h3 class="tour__city">London</h3>
+                <span class="tour__price">$1769.99 <span>$2009.99</span></span>
+              </div>
+
+              <div class="tour__rating">
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star-half-stroke tour__star"></i>
+                <span class="tour__ratings-number">11 customer reviews</span>
+              </div>
+
+              <p class="tour__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quis delectus,
+                aspernatur quos dicta, nostrum corrupti deserunt dolore velit saepe voluptatem, suscipit repellendus.
+              </p>
+
+              <div class="tour__icons">
+                <i class="fa-solid fa-bowl-food"></i><span>Meal</span>
+                <i class="fa-solid fa-clock"></i><span>7 Days</span>
+                <i class="fa-solid fa-plane"></i><span>Flight</span>
+              </div>
+
+              <button class="tour__book-btn btn btn--primary">Book now</button>
+            </div>
+          </article>
+
+          <article class="tour">
+            <div class="tour__imagebox">
+              <img src="img/tours/egypt_640.jpg" alt="Photo of Egypt" class="tour__image" loading="lazy">
+            </div>
+            <div class="tour__contentbox">
+
+              <div class="tour__row">
+                <h3 class="tour__city">Egypt</h3>
+                <span class="tour__price">$1349.99</span>
+              </div>
+
+              <div class="tour__rating">
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <span class="tour__ratings-number">6 customer reviews</span>
+              </div>
+
+              <p class="tour__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui ullam maiores
+                aut provident nam unde explicabo reprehenderit, repudiandae rem minus obcaecati eligendi magni soluta?
+              </p>
+
+              <div class="tour__icons">
+                <i class="fa-solid fa-bowl-food"></i><span>Meal</span>
+                <i class="fa-solid fa-clock"></i><span>7 Days</span>
+                <i class="fa-solid fa-plane"></i><span>Flight</span>
+              </div>
+
+              <button class="tour__book-btn btn btn--primary">Book now</button>
+            </div>
+          </article>
+
+          <article class="tour">
+            <div class="tour__imagebox">
+              <img src="img/tours/rome_640.jpg" alt="Photo of Rome" class="tour__image" loading="lazy">
+            </div>
+            <div class="tour__contentbox">
+
+              <div class="tour__row">
+                <h3 class="tour__city">Rome</h3>
+                <span class="tour__price">$1121.99</span>
+              </div>
+
+              <div class="tour__rating">
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star-half-stroke tour__star"></i>
+                <span class="tour__ratings-number">4 customer reviews</span>
+              </div>
+
+              <p class="tour__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam repudiandae
+                fugiat dignissimos vero fuga corrupti ad laudantium. Nisi non consequatur nihil nobis! Odio, quisquam
+                eius?</p>
+
+              <div class="tour__icons">
+                <i class="fa-solid fa-bowl-food"></i><span>Meal</span>
+                <i class="fa-solid fa-clock"></i><span>7 Days</span>
+                <i class="fa-solid fa-plane"></i><span>Flight</span>
+              </div>
+
+              <button class="tour__book-btn btn btn--primary">Book now</button>
+            </div>
+          </article>
+
+          <article class="tour">
+            <div class="tour__imagebox">
+              <img src="img/tours/santorini_640.jpg" alt="Photo of Santorini" class="tour__image" loading="lazy">
+              <span class="tour__discount">-13%</span>
+            </div>
+            <div class="tour__contentbox">
+
+              <div class="tour__row">
+                <h3 class="tour__city">Santorini</h3>
+                <span class="tour__price">$2789.99 <span>$3208.99</span></span>
+              </div>
+
+              <div class="tour__rating">
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <i class="fa-solid fa-star tour__star"></i>
+                <span class="tour__ratings-number">8 customer reviews</span>
+              </div>
+
+              <p class="tour__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+                asperiores unde blanditiis sapiente, nisi animi quod vero iste nam facere reiciendis magni minus
+                voluptatum autem!?</p>
+
+              <div class="tour__icons">
+                <i class="fa-solid fa-bowl-food"></i><span>Meal</span>
+                <i class="fa-solid fa-clock"></i><span>7 Days</span>
+                <i class="fa-solid fa-plane"></i><span>Flight</span>
+              </div>
+
+              <button class="tour__book-btn btn btn--primary">Book now</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION GALLERY -->
+    <section class="section-gallery" id="gallery">
+      <div class="container">
+        <h2 class="section-heading" data-title="Our gallery">Our gallery</h2>
+
+        <div class="gallery">
+
+          <a href="img/gallery/gallery1_800.jpg" class="gallery__photo">
+            <img src="img/gallery/gallery1_480.jpg" alt="Trip photo 1" loading="lazy">
+            <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
+          </a>
+
+          <a href="img/gallery/gallery2_800.jpg" class="gallery__photo">
+            <img src="img/gallery/gallery2_480.jpg" alt="Trip photo 2" loading="lazy">
+            <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
+          </a>
+
+          <a href="img/gallery/gallery3_800.jpg" class="gallery__photo">
+            <img src="img/gallery/gallery3_480.jpg" alt="Trip photo 3" loading="lazy">
+            <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
+          </a>
+
+          <a href="img/gallery/gallery4_800.jpg" class="gallery__photo">
+            <img src="img/gallery/gallery4_480.jpg" alt="Trip photo 4" loading="lazy">
+            <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
+          </a>
+
+          <a href="img/gallery/gallery5_800.jpg" class="gallery__photo">
+            <img src="img/gallery/gallery5_480.jpg" alt="Trip photo 5" loading="lazy">
+            <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
+          </a>
+
+          <a href="img/gallery/gallery6_800.jpg" class="gallery__photo">
+            <img src="img/gallery/gallery6_480.jpg" alt="Trip photo 6" loading="lazy">
+            <div class="gallery__overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
+          </a>
+
+        </div>
+        <a href="#" class="gallery__btn btn btn--secondary">Show more</a>
+      </div>
+    </section>
+
+    <!-- SECTION REVIEWS -->
+    <section class="section-reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-heading" data-title="Our reviews">Our reviews</h2>
+
+        <div class="testimonial-slider swiper">
+          <div class="testimonial-slider__container swiper-wrapper">
+
+            <div class="testimonial-slider__slide swiper-slide">
+              <div class="testimonial-slider__data">
+                <img src="img/reviews/caldwell.jpg" alt="Noah Caldwell" class="testimonial-slider__image"
+                  loading="lazy">
+                <h3 class="testimonial-slider__name">Noah Caldwell</h3>
+              </div>
+              <p class="testimonial-slider__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi cum, voluptatem maxime, quas earum iusto quae tenetur est natus cumque laborum illum
+                recusandae fugiat ipsa.</p>
+            </div>
+
+            <div class="testimonial-slider__slide swiper-slide">
+              <div class="testimonial-slider__data">
+                <img src="img/reviews/fowler.jpg" alt="Virgil Fowler" class="testimonial-slider__image" loading="lazy">
+                <h3 class="testimonial-slider__name">Virgil Fowler</h3>
+              </div>
+              <p class="testimonial-slider__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                quo praesentium sapiente error. Delectus praesentium dolore vero libero sunt sed quae est possimus quas!
+                Tempore.</p>
+            </div>
+
+            <div class="testimonial-slider__slide swiper-slide">
+              <div class="testimonial-slider__data">
+                <img src="img/reviews/williamson.jpg" alt="Megan Williamson" class="testimonial-slider__image"
+                  loading="lazy">
+                <h3 class="testimonial-slider__name">Megan Williamson</h3>
+              </div>
+              <p class="testimonial-slider__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
+                molestiae a temporibus soluta voluptas nisi assumenda labore provident, architecto eveniet nostrum, quod
+                accusamus iure quo?</p>
+            </div>
+
+            <div class="testimonial-slider__slide swiper-slide">
+              <div class="testimonial-slider__data">
+                <img src="img/reviews/fields.jpg" alt="Emma Fields" class="testimonial-slider__image" loading="lazy">
+                <h3 class="testimonial-slider__name">Emma Fields</h3>
+              </div>
+              <p class="testimonial-slider__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Assumenda, nostrum quae. Iste cum dolore ratione placeat tenetur perspiciatis earum. Reiciendis,
+                deserunt. Accusantium quidem.</p>
+            </div>
+
+            <div class="testimonial-slider__slide swiper-slide">
+              <div class="testimonial-slider__data">
+                <img src="img/reviews/tucker.jpg" alt="Zoey Tucker" class="testimonial-slider__image" loading="lazy">
+                <h3 class="testimonial-slider__name">Zoey Tucker</h3>
+              </div>
+              <p class="testimonial-slider__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                ullam sequi, repudiandae aliquid, beatae similique vitae rerum rem inventore ea tempore earum eius
+                sapiente! Necessitatibus.</p>
+            </div>
+
+            <div class="testimonial-slider__slide swiper-slide">
+              <div class="testimonial-slider__data">
+                <img src="img/reviews/lucas.jpg" alt="Christopher Lucas" class="testimonial-slider__image"
+                  loading="lazy">
+                <h3 class="testimonial-slider__name">Christopher Lucas</h3>
+              </div>
+              <p class="testimonial-slider__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                odio, sint id recusandae aperiam iure reprehenderit, sapiente pariatur modi quod tempore voluptate
+                voluptatem et quasi?</p>
+            </div>
+          </div>
+          <div class="testimonial-slider__pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION NEWSLETTER -->
+    <section class="section-newsletter" id="newsletter">
+      <div class="section-newsletter__container container">
+
+        <h3 class="section-newsletter__title">Sign up for 25% discount</h3>
+        <p class="section-newsletter__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          quisquam pariatur excepturi inventore velit, veritatis quidem minus nemo nesciunt exercitationem totam ipsa
+          deserunt.</p>
+
+        <form class="subscribe-form">
+          <input type="email" name="subscribe-email" id="subscribe-email" autocomplete="email"
+            placeholder="Enter your email" required>
+          <button class="btn btn--primary">Subscribe</button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+        <h2 class="section-heading" data-title="Contact us">Contact us</h2>
+
+        <div class="section-contact__container">
+
+          <form class="contact-form section-contact__form">
+            <label>
+              <input type="text" id="contact-form-name" name="contact-form-name" autocomplete="name" pattern="[A-Za-z]+"
+                minlength="3" placeholder="Name" required>
+            </label>
+
+            <label>
+              <input type="email" id="contact-form-email" name="contact-form-email" autocomplete="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="E-mail" required>
+            </label>
+
+            <label>
+              <input type="tel" id="contact-form-phone" name="contact-form-phone" autocomplete="tel"
+                pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="Phone" required>
+            </label>
+
+            <label>
+              <input type="text" id="contact-form-subject" name="contact-form-subject" placeholder="Subject">
+            </label>
+
+            <textarea name="contact-form-message" id="contact-form-message" cols="20" rows="7"
+              placeholder="Message"></textarea>
+
+            <button class="btn btn--primary">Send Message</button>
+          </form>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180897.1842401305!2d13.192788881070646!3d52.49987200449926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e373f035901%3A0x42120465b5e3b70!2sBerlin%2C%20Niemcy!5e0!3m2!1spl!2spl!4v1669142256816!5m2!1spl!2spl"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__container">
+
+        <div class="footer__box">
+          <img class="logo footer__logo" src="img/logo-white.svg" alt="Company Logo">
+          <p class="footer__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi autem
+            dolores nulla iusto.</p>
+          <ul class="socials">
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__box-title">Quick links</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="#about" class="footer__link">About</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#services" class="footer__link">Services</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#tours" class="footer__link">Tours</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#gallery" class="footer__link">Gallery</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#reviews" class="footer__link">Reviews</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__box-title">Extra links</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Privacy Policy</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Terms of use</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">FAQ</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#" class="footer__link">Refund policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <h3 class="footer__box-title">Contact info</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Am Zwirngraben 75, Berlin, 89828</span>
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>ready4travel@gmail.com</span>
+            </li>
+            <li class="footer__list-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+1 321-972-8784</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copyright">Copyright &copy;2022 Slawomir Wielgus. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal">
+    <div class="modal__container">
+      <button class="modal__btn-close">&times;</button>
+      <h2 class="modal__header">Book your tour</h2>
+
+      <form class="book-form modal__form">
+        <div class="book-form__row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="book-form__row">
+          <label for="destination">Destination</label>
+          <select name="destination" id="destination">
+            <option value="1">Sydney</option>
+            <option value="2">Paris</option>
+            <option value="3">London</option>
+            <option value="4">Egypt</option>
+            <option value="5">Rome</option>
+            <option value="6">Santorini</option>
+          </select>
+        </div>
+
+        <div class="book-form__row">
+          <label for="guests">Number of guests</label>
+          <input type="number" id="guests" name="guests" required>
+        </div>
+
+        <div class="book-form__row">
+          <label for="date">Depart date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <button class="book-form__btn-book btn btn--primary">Book now</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

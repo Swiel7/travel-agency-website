@@ -1,0 +1,40 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.primary-heading {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  color: $color-secondary;
+  letter-spacing: 0.3rem;
+}
+
+.section-heading {
+  padding-bottom: $padding-m;
+  font-size: $font-size-l;
+  font-weight: 600;
+  color: $color-primary;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: attr(data-title);
+    position: absolute;
+    inset: 0;
+    font-size: $font-size-xl;
+    color: rgba($color-primary-light, 0.3);
+    letter-spacing: 0.4rem;
+    z-index: 0;
+
+    @include set-breakpoint(tab-port) {
+      font-size: $font-size-xxl;
+      inset: -1rem 0 0 0;
+    }
+
+    @include set-breakpoint(tab-land) {
+      inset: -2rem 0 0 0;
+    }
+  }
+}

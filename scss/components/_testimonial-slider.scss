@@ -1,0 +1,64 @@
+@use '../abstracts/variables.scss' as *;
+
+.testimonial-slider {
+  padding-bottom: calc($padding-m * 1.5);
+
+  &__slide {
+    padding: $padding-s;
+    background-color: $color-secondary-dark;
+    height: auto;
+    position: relative;
+    box-shadow: $shadow-1;
+
+    &::before {
+      content: '\f10d';
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: $font-size-l;
+      position: absolute;
+      top: $padding-s;
+      right: $padding-s;
+      color: $color-primary;
+      line-height: 1;
+    }
+  }
+
+  &__data {
+    display: flex;
+    gap: $gap-xs;
+    align-items: center;
+  }
+
+  &__image {
+    width: $font-size-xxl;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: $font-size-s;
+    color: $color-tertiary;
+    font-weight: 400;
+  }
+
+  &__description {
+    padding-top: $padding-xs;
+    font-size: $font-size-xs;
+    color: $color-tertiary-light;
+    line-height: 1.7;
+  }
+
+  &__pagination {
+    span {
+      width: $font-size-s;
+      height: $font-size-s;
+      margin-right: $padding-xs !important;
+    }
+  }
+}

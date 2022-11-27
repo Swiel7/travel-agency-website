@@ -1,0 +1,29 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  background-color: $color-secondary;
+  box-shadow: $shadow-1;
+  z-index: 99;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding-inline: $padding-s !important;
+  }
+
+  &__btn {
+    visibility: hidden;
+
+    @include set-breakpoint(desktop) {
+      visibility: visible;
+    }
+  }
+}

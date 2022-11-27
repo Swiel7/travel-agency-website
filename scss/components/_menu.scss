@@ -1,0 +1,47 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.menu {
+  @include set-breakpoint(only-mobile) {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    bottom: 0;
+    width: 27rem;
+    background-color: $color-secondary;
+    box-shadow: $shadow-1;
+    transform: translateX(-110%);
+    padding-block: $padding-s;
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include set-breakpoint(desktop) {
+      flex-direction: row;
+      align-items: center;
+      gap: $gap-s;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: $font-size-s;
+    color: $color-tertiary;
+
+    @include set-breakpoint(only-mobile) {
+      padding: $padding-s $padding-m;
+    }
+
+    @include set-hover {
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

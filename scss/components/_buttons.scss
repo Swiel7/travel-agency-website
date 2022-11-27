@@ -1,0 +1,106 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.hamburger {
+  height: $font-size-s;
+  aspect-ratio: 2;
+  position: relative;
+
+  @include set-breakpoint(desktop) {
+    display: none;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    height: 0.3rem;
+    width: 100%;
+    background-color: $color-tertiary;
+    border-radius: 0.2rem;
+    transition: top 0.2s 0.2s, opacity 0.2s 0.2s, transform 0.2s 0.4s;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      top: 100%;
+    }
+  }
+
+  &--open &__line {
+    &:not(:nth-child(2)) {
+      top: calc(50% - 0.15rem);
+    }
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: $padding-xs $padding-s;
+  font-size: $font-size-s;
+  border-radius: 1rem;
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &:focus-visible {
+    outline: 0.3rem solid $color-primary;
+    outline-offset: 0.3rem;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border: $border-1;
+    color: $color-secondary;
+
+    @include set-hover {
+      &:hover {
+        color: $color-primary;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+
+  &--secondary {
+    border: $border-1;
+    border-color: $color-tertiary;
+    color: $color-tertiary;
+    background-color: $color-secondary;
+
+    @include set-hover {
+      &:hover {
+        background-color: $color-secondary-dark;
+        color: $color-tertiary;
+      }
+    }
+
+    &:focus-visible {
+      outline-color: $color-tertiary;
+    }
+  }
+
+  &--white {
+    border: $border-1;
+    border-color: $color-secondary;
+    color: $color-secondary;
+    background-color: transparent;
+
+    &:focus-visible {
+      outline-color: $color-secondary;
+    }
+  }
+}
